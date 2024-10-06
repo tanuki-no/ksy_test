@@ -46,6 +46,9 @@ FIND_PROGRAM(
       )
 MESSAGE(STATUS    "Kaitai struct compiler found at ${KSC}")
 
+# Find Kaitai Struct: runtime library for C++/STL
+INCLUDE ( FindKS_CPP.cmake )
+
 # Find JSON CPP
 FIND_PACKAGE(PkgConfig REQUIRED)
 PKG_CHECK_MODULES(JSONCPP jsoncpp)
