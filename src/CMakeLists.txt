@@ -1,0 +1,40 @@
+# Define language
+ENABLE_LANGUAGE ( CXX )
+
+# Version
+CONFIGURE_FILE (
+  ${CMAKE_CURRENT_SOURCE_DIR}/version.cpp.in
+  ${CMAKE_CURRENT_BINARY_DIR}/version.cpp
+  NEWLINE_STYLE UNIX )
+
+# Includes
+INCLUDE_DIRECTORIES (
+  ${CMAKE_SOURCE_DIR}/include
+  )
+
+# Sources
+SET (
+  SOURCES
+
+  ${CMAKE_CURRENT_BINARY_DIR}/version.cpp
+  "main.cpp"
+)
+
+# Executable
+ADD_EXECUTABLE(
+  ${PROJECT_NAME} ${SOURCES}
+  )
+
+SET_PROPERTY(
+  TARGET   ${PROJECT_NAME}
+  PROPERTY CXX_STANDARD 11)
+
+TARGET_COMPILE_OPTIONS(
+  ${PROJECT_NAME} PRIVATE -Wall -Werror
+  )
+
+TARGET_LINK_LIBRARIES(
+  ${PROJECT_NAME} PRIVATE Threads::Threads ${JSONCPP_LIBRARIES}
+  )
+
+# End of filee
