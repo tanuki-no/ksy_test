@@ -61,6 +61,12 @@ int main(int argc, char* argv[], char* env[]) {
             } else {
                 if (0 == _direction.compare("bin")) {
                     src.open(arg, std::fstream::binary);
+
+                    kaitai::kstream ks(&src);
+                    mts::test::teltonica_proto_t* tp = new mts::test::teltonica_proto_t(&ks);
+
+                    delete tp;
+
                 } else {
                     src.open(arg, std::fstream::in);
                 }
