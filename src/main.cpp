@@ -10,6 +10,7 @@
 #include "version.hpp"
 #include <iostream>
 #include <fstream>
+#include "teltonica_proto.h"
 
 
 /* Usage */

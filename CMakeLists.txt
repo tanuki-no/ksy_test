@@ -39,6 +39,12 @@ SET ( Project_Include_Dir     "${CMAKE_SOURCE_DIR}/include"		)
 SET ( Project_Source_Dir      "${CMAKE_SOURCE_DIR}/src"			)
 
 # Find KSY
+FIND_PROGRAM(
+      KSC   "ksc"
+      PATHS "/bin" "/sbin" "/usr/bin" "/usr/sbin" "/opt/bin"
+      REQUIRED
+      )
+MESSAGE(STATUS    "Kaitai struct compiler found at ${KSC}")
 
 # Find JSON CPP
 FIND_PACKAGE(PkgConfig REQUIRED)
