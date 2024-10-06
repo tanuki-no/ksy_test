@@ -57,7 +57,7 @@ types:
         type: u1
         doc:  N = N1 + N2 + N3 + N4
  
-      - id:   n1
+      - id:   num_n1_data
         type: u1
         doc:  Number of properties, which length is 1 byte.
  
@@ -65,9 +65,9 @@ types:
         type: n1_data_type
         doc:  One byte key-value pairs
         repeat: expr
-        repeat-expr: n1
+        repeat-expr: num_n1_data
  
-      - id:   n2
+      - id:   num_n2_data
         type: u1
         doc:  Number of properties, which length is 2 byte.
  
@@ -75,9 +75,9 @@ types:
         type: n2_data_type
         doc:  Two byte key-value pairs
         repeat: expr
-        repeat-expr: n2
+        repeat-expr: num_n2_data
  
-      - id:   n4
+      - id:   num_n4_data
         type: u1
         doc:  Number of properties, which length is 4 byte.
  
@@ -85,9 +85,9 @@ types:
         type: n4_data_type
         doc:  Four byte key-value pairs
         repeat: expr
-        repeat-expr: n4
+        repeat-expr: num_n4_data
  
-      - id:   n8
+      - id:   num_n8_data
         type: u1
         doc:  Number of properties, which length is 8 byte.
  
@@ -95,7 +95,7 @@ types:
         type: n8_data_type
         doc:  Four byte key-value pairs
         repeat: expr
-        repeat-expr: n8
+        repeat-expr: num_n8_data
  
   gps_data_type:
     seq:

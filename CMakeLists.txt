@@ -18,7 +18,7 @@ PROJECT("ksy_test" CXX)
 SET ( PROJECT_VERSION_MAJOR     0                                       )
 SET ( PROJECT_VERSION_MINOR     0                                       )
 SET ( PROJECT_VERSION_PATCH     1                                       )
-SET ( PROJECT_VERSION_TWEAK     0                                       )
+SET ( PROJECT_VERSION_TWEAK     6                                       )
 SET ( PROJECT_VERSION           ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}.${PROJECT_VERSION_TWEAK} )
 
 STRING( TIMESTAMP TODAY "%d/%m/%Y"					)
