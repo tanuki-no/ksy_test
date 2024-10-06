@@ -28,21 +28,22 @@ EXECUTE_PROCESS (
 # Includes
 INCLUDE_DIRECTORIES (
   ${CMAKE_SOURCE_DIR}/include
+  ${JSONCPP_INCLUDE_DIRS}
   ${CMAKE_CURRENT_BINARY_DIR}
   )
 
-# Sources
+# Project sources
 SET (
-  SOURCES
+  ${PROJECT_NAME}_SOURCES
 
   ${CMAKE_CURRENT_BINARY_DIR}/version.cpp
   ${CMAKE_CURRENT_BINARY_DIR}/teltonica_proto.cpp
   "main.cpp"
-)
+  )
 
-# Executable
+# Project Executable
 ADD_EXECUTABLE(
-  ${PROJECT_NAME} ${SOURCES}
+  ${PROJECT_NAME} ${${PROJECT_NAME}_SOURCES}
   )
 
 TARGET_COMPILE_OPTIONS(
@@ -54,5 +55,19 @@ TARGET_LINK_LIBRARIES(
   ${JSONCPP_LIBRARIES}
   ${KS_CPP_LIBRARY}
   )
+
+# Small utility to convert dump to binary data
+SET ( DUMP2HEX_NAME "dump2hex" )
+
+SET (
+  ${DUMP2HEX_NAME}_SOURCES
+  
+  "dump2hex.cpp"
+  )
+
+ADD_EXECUTABLE(
+  ${DUMP2HEX_NAME} ${${DUMP2HEX_NAME}_SOURCES}
+  )
+
 
 # End of filee

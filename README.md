@@ -15,3 +15,10 @@ cd build
 cmake ..
 make
 ```
+# Preparing binary files from hex dump
+I wrote a small handy utility named `dump2hex` to solve this. Here it is the typical usage for quick and dirty check:
+```
+cd build
+src/dump2hex ../ksy_test/data/examp0_teltonika.txt data.bin
+./src/ksy_test -d json data.bin
+```
