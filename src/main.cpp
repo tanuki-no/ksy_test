@@ -97,9 +97,9 @@ int main(
             if (mts::test::teltonica_extended_t::codec_type_t::CODEC_TYPE_CODEC8_EXTENDED != _tp.data()->codec_id()) {
                 throw std::invalid_argument("The codec is not Teltonica Extended (0x8E)!");
             }
-            // if (_tp.data()->number_of_data_1() != _tp.data()->number_of_data_2()) {
-            //     throw std::invalid_argument("Number of records does not match!");
-            // }
+            if (_tp.data()->number_of_data_1() != _tp.data()->number_of_data_2()) {
+                throw std::invalid_argument("Number of records does not match!");
+            }
 
             // JSONize the result
             Json::StyledWriter  _writer;
@@ -190,12 +190,12 @@ int main(
 
                 Json::Value _tmp;
 
-                // auto _nx = _tp.data()->avl_data()->io_element()->nx_data();
-                // for (auto i = _nx->begin(); i != _nx->end(); ++i) {
-                //     _tmp["io_id"] = (*i).get()->key();
+                auto _nx = _tp.data()->avl_data()->io_element()->nx_data();
+                for (auto i = _nx->begin(); i != _nx->end(); ++i) {
+                    _tmp["io_id"] = (*i).get()->key();
                 //     _tmp["value"] = (*i).get()->value();
-                //      _io_data.append(_tmp);
-                // }
+                     _io_data.append(_tmp);
+                }
             }
 
              _v["packet"]["avl_data"]["io_data"]["io_data"] = _io_data;

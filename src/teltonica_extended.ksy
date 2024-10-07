@@ -50,7 +50,8 @@ types:
  
     - id:     avl_data
       type:   avl_data_type
-      doc:    Содержимое пакета
+      size:   _root.len_data - 3
+      doc:    Данные AVL
 
     - id:     number_of_data_2
       type:   u1
@@ -74,6 +75,7 @@ types:
 
       - id:   io_element
         type: io_element_type
+        size: _root.len_data - 27
         doc:  Элементы ввода-вывода
 
   gps_data_type:
@@ -106,7 +108,7 @@ types:
     seq:
       - id:   event_id
         type: u2
-        doc:  Event IO ID – if data is acquired on event – this field defines which IO property has changed and generated an event. If data cause is not event – the value is 0.
+        doc: Event IO ID – если данные получены по событию – это поле определяет, какое свойство IO изменилось и сгенерировало событие. Если причина данных не является событием – значение равно 0. 
 
       - id:   total_io
         type: u2
@@ -211,7 +213,7 @@ types:
       - id:   len_value
         type: u2
         doc:  Размер
-      
+
       - id:   value
-        size: len_value
+        type: u8
         doc:  Значение
