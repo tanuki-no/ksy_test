@@ -212,3 +212,6 @@ types:
         type: u2
         doc:  Размер
       
+      - id:   value
+        size: len_value
+        doc:  Значение

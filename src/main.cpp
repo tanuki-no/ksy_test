@@ -133,15 +133,6 @@ int main(
             _v["packet"]["avl_data"]["io_data"]["event_id"]     = _tp.data()->avl_data()->io_element()->event_id();
             _v["packet"]["avl_data"]["io_data"]["total_ios"]    = _tp.data()->avl_data()->io_element()->total_io();
 
-
-            // std::cout
-            //     << "N1 = " << _tp.data()->avl_data()->io_element()->num_n1_data()
-            //     << ", N2 = " << _tp.data()->avl_data()->io_element()->num_n2_data()
-            //     << ", N4 = " << _tp.data()->avl_data()->io_element()->num_n4_data()
-            //     << ", N8 = " << _tp.data()->avl_data()->io_element()->num_n8_data()
-            //     << ", NX = " << _tp.data()->avl_data()->io_element()->num_nx_data()
-            //     << std::endl;
-
             /* N1 */
             if (0 < _tp.data()->avl_data()->io_element()->num_n1_data()) {
 
