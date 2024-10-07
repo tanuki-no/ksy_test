@@ -1,0 +1,50 @@
+{
+    "preambule": 0,
+    "data_len": 771,
+    "codec_id": 142,
+    "records_num": 1,
+    "avl_data": [
+        {
+            "gps_data": 
+            {
+                "timestamp": 1726851822000, 
+                "priority": 1,
+                "Longitude": 2.2e-06,
+                "Latitude": 2.3e-06,
+                "Altitude": 4587,
+                "Angle": 2,
+                "Satellites": 2,
+                "Speed": 95,
+                "datetime": "2024-09-20 20:03:42"
+            },
+            "io_data":{
+                "event_id": 1,
+                "total_IOs": 24,
+                "io_data": [
+                    {"io_id": 95, "param_name": "Geofence_zone_17", "name": "Geofence_zone_17", "value": 0},
+                    {"io_id": 153, "param_name": "Geofence_zone_22", "name": "Geofence_zone_22", "value": 0},
+                    {"io_id": 64, "param_name": "Geofence_zone_9", "name": "Geofence_zone_9", "value": 0},
+                    {"io_id": 2, "param_name": "digital_input_2", "name": "digital_input_2", "value": 48},
+                    {"io_id": 858, "param_name": "Battery Capacity", "name": "Battery Capacity", "value": 32},
+                    {"io_id": 204, "param_name": "LLS_2_Temperature", "name": "LLS_2_Temperature", "value": 23},
+                    {"io_id": 364, "param_name": "Internal battery temperature 2", "name": "Internal battery temperature 2", "value": 1949.4},
+                    {"io_id": 260, "param_name": "EcoDuration", "name": "EcoDuration", "value": 11753},
+                    {"io_id": 1123, "param_name": "BMS2 Temperature Current Min", "name": "BMS2 Temperature Current Min", "value": 6356},
+                    {"io_id": 11003, "param_name": "BMS0 Voltage Cell Max", "name": "BMS0 Voltage Cell Max", "value": 736708614},
+                    {"io_id": 357, "param_name": "Single mileage", "name": "Single mileage", "value": 1153941991},
+                    {"io_id": 1136, "param_name": "Highest Battery Voltage", "name": "Highest Battery Voltage", "value": 7264891954792782979},
+                    {"io_id": 1178, "param_name": "Battery ID 0 Error Code", "name": "Battery ID 0 Error Code", "value": 1622353524599203228},
+                    {"io_id": 1183, "param_name": "Highest Battery 2 Temperature", "name": "Highest Battery 2 Temperature", "value": 1240428265805562960},
+                    {"io_id": 1130, "param_name": "RPM", "name": "RPM", "value": 3808423947333556093},
+                    {"io_id": 996, "param_name": "Engine Total Fuel Used", "name": "Engine Total Fuel Used", "value": 465273807295667755},
+                    {"io_id": 1065, "param_name": "Washer Fluid Level", "name": "Washer Fluid Level", "value": 108821261708022752},
+                    {"io_id": 921, "param_name": "Manual_CAN_21", "name": "Manual_CAN_21", "value": 7166027357672449575},
+                    {"io_id": 955, "param_name": "Aftertreatment 1 Diesel Oxidation Catalyst Differential Pressure", "name": "Aftertreatment 1 Diesel Oxidation Catalyst Differential Pressure", "value": 4260976045730355277},
+                    {"io_id": 1045, "param_name": "Aftertreatment 1 Diesel Particulate Filter Intake Pressure", "name": "Aftertreatment 1 Diesel Particulate Filter Intake Pressure", "value": 7552966981703445298},
+                    {"io_id": 920, "param_name": "Manual_CAN_20", "name": "Manual_CAN_20", "value": 8960729555011899240}
+                ]
+            }
+        }
+    ],
+    "response_hex": "00 00 00 01"
+}

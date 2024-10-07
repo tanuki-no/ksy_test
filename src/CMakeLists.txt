@@ -13,12 +13,14 @@ CONFIGURE_FILE (
   NEWLINE_STYLE UNIX )
 
 # Generate Kaitai data
+SET ( PROTO   "teltonica_extended" )
+
 SET (
   KSC_OPTIONS
     "-t" "cpp_stl"
     "--cpp-namespace" "mts::test"
     "--cpp-standard" "11"
-    ${CMAKE_CURRENT_SOURCE_DIR}/teltonica.ksy
+    ${CMAKE_CURRENT_SOURCE_DIR}/${PROTO}.ksy
   )
 EXECUTE_PROCESS (
   COMMAND ${KSC} ${KSC_OPTIONS}
@@ -37,7 +39,7 @@ SET (
   ${PROJECT_NAME}_SOURCES
 
   ${CMAKE_CURRENT_BINARY_DIR}/version.cpp
-  ${CMAKE_CURRENT_BINARY_DIR}/teltonica_proto.cpp
+  ${CMAKE_CURRENT_BINARY_DIR}/${PROTO}.cpp
   "main.cpp"
   )
 

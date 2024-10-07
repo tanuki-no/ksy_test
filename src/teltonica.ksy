@@ -33,6 +33,20 @@ seq:
     type:   u4
     doc:    Код CRC-16
  
+enums:
+  codec_type:
+    0x08: codec8
+    0x8E: codec8_extended
+    0x10: codec16
+    0x0C: codec12
+    0x0D: codec13
+    0x0E: codec14
+ 
+  priority_type:
+    0:  low
+    1:  high
+    2:  panic
+ 
 types:
   avl_data_type:
     seq:
@@ -162,17 +176,3 @@ types:
       - id:   value
         type: u8
         doc:  Значение
- 
-enums:
-  codec_type:
-    0x08: codec8
-    0x8E: codec8_extended
-    0x10: codec16
-    0x0C: codec12
-    0x0D: codec13
-    0x0E: codec14
- 
-  priority_type:
-    0:  low
-    1:  high
-    2:  panic
