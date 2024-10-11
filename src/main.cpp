@@ -85,7 +85,8 @@ int main(
 
     /* Do parsing here to make it more clear to understand */
     try {
-        if ("bin" == _direction) {
+    	/* Build JSON from binary */
+        if ("json" == _direction) {
 
             // Create Kaitai stream
             kaitai::kstream _ks(&_ifs);
@@ -193,7 +194,7 @@ int main(
                 auto _nx = _tp.data()->avl_data()->io_element()->nx_data();
                 for (auto i = _nx->begin(); i != _nx->end(); ++i) {
                     _tmp["io_id"] = (*i).get()->key();
-                //     _tmp["value"] = (*i).get()->value();
+                     _tmp["value"] = (*i).get()->value();
                      _io_data.append(_tmp);
                 }
             }
@@ -208,6 +209,7 @@ int main(
                 << "------------------------------------------------------------------" << std::endl
                 << std::endl;
 
+	/* Build binary from JSON */
         } else {
 
         }
